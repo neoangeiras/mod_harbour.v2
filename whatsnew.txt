@@ -1,3 +1,10 @@
+18.11.2025
+==========
+Clean mod_harbour.c to avoid warning when compiling using gcc (Ubuntu 22.04)
+Create new function in ap_func_c.c: ap_getscriptpath()
+Create go.sh (mod_harbour.v2.so)
+Create goa.sh (libmhapache.so)
+
 12.06.2022 -> 2.1.13
 =====================
 Golden rule for the mod: all statics must be thread statics. We have added a directive that 
