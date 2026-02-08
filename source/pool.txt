@@ -1,0 +1,21 @@
+FUNCTION hb_HtmlEncode( cString )
+
+   LOCAL cChars :=  hb_UTF8ToStr( "<>ÉÍÑÓÚáéíñóú" )
+   LOCAL aHtmlUnicEntities := { ;
+      "&lt;", ;
+      "&gt;", ;
+      "&Eacute;", ;
+      "&Iacute;", ;
+      "&Ntilde;", ;
+      "&Oacute;", ;
+      "&Uacute;", ;
+      "&aacute;", ;
+      "&eacute;", ;
+      "&iacute;", ;
+      "&ntilde;", ;
+      "&oacute;", ;
+      "&uacute;" }
+
+RETURN hb_StrReplace( hb_UTF8ToStr( cString ), cChars, aHtmlUnicEntities )
+
+
